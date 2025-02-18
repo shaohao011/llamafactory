@@ -1,0 +1,35 @@
+### model
+model_name_or_path: meta-llama/Llama-3.3-70B-Instruct
+adapter_name_or_path: saves/llama3-70b/lora_ep50_check_filtered/sft
+trust_remote_code: true
+# method
+stage: sft
+do_train: false
+do_predict: true
+predict_with_generate: true
+finetuning_type: lora
+lora_target: all
+
+
+# dataset
+eval_dataset: anzhen_fold2_val_llm  #修改为测试集
+template: llama3
+cutoff_len: 8096
+max_samples: 1000
+preprocessing_num_workers: 16
+# output
+output_dir: saves/llama3-70b/lora_ep50_check_filtered/sft-infer-1 #修改为保存地址
+logging_steps: 1
+overwrite_output_dir: true
+
+# eval
+per_device_eval_batch_size: 4
+# generation
+max_new_tokens: 4096
+temperature: 0.1
+top_k: 1
+
+
+# ```bash
+# llamafactory-cli train  examples/train_lora/qwen2vl_lora_sft.yaml 
+
