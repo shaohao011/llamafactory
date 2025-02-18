@@ -1,0 +1,29 @@
+{
+"anzhen_llamafactory_stages3_train": {
+  "file_name": "anzhen_llamafactory_stages3_train.json",
+  "formatting": "sharegpt",
+  "columns": {
+    "messages": "conversations",
+    "system": "system",
+    "tools": "tools"
+  }
+},
+"anzhen_llamafactory_stages3_val": {
+  "file_name": "anzhen_llamafactory_stages3_val.json",
+  "formatting": "sharegpt",
+  "columns": {
+    "messages": "conversations",
+    "system": "system",
+    "tools": "tools"
+  }
+},
+"anzhen_llamafactory_stages3_test": {
+  "file_name": "anzhen_llamafactory_stages3_test.json",
+  "formatting": "sharegpt",
+  "columns": {
+    "messages": "conversations",
+    "system": "system",
+    "tools": "tools"
+  }
+}
+}
